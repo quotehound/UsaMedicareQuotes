@@ -13,6 +13,10 @@ import Enrolled from './components/Enroll';
 import Gender from './components/Gender';
 import Month from './components/Month';
 import Day from  './components/Day';
+import Year from './components/Year';
+import Address from './components/Address';
+import Name from './components/Name';
+import EmailPhone from './components/EmailPhone';
 class App extends Component {
 
   state = {
@@ -96,6 +100,9 @@ class App extends Component {
                         this.setState({
                           postData: {
                             ...this.state.postData,
+                            jornaya_lead_id: document.getElementById('leadid_token').value,
+                      trusted_form_cert_id: document.getElementById('xxTrustedFormToken_0').value,
+                      coverage_time: v,
                             are_you_currently_enrolled_in_both_medicare_part_a_part_b: v,
                           },
                         });
@@ -147,6 +154,101 @@ class App extends Component {
                       />
                 
                 </Route>
+
+                <Route path='/year' exact> 
+                <Year 
+
+                setDOB={(v) => {  
+                  this.setState({
+                    postData: {
+                    ...this.state.postData,
+                    dob: v,
+                    },
+                  });
+                }}
+
+                />
+                </Route>
+
+                <Route path='/address' exact>
+                  <Address 
+                    setAddress = {(v) => {
+                      this.setState({
+
+                        postData: {
+                          ...this.state.postData, 
+                          address: v,
+                        },                    
+                      });
+                    }}
+                  />
+
+                </Route>
+
+
+                <Route path='/name' exact> 
+                <Name
+                setFName={(v) => {
+                  this.setState({
+                    postData: {
+                      ...this.state.postData,
+                      first_name: v,
+                    },
+                  });
+
+
+                }}
+
+                setLName={(v) => {
+                  this.setState({
+                    postData: {
+                      ...this.state.postData,
+                      last_name: v,
+                    },
+                  });
+                }}
+              />
+                
+                </Route>
+
+                <Route path='/email-phone' exact>
+              <EmailPhone
+                 email_address={this.state.postData.email_address}
+                 phone_home={this.state.postData.phone_home}
+ 
+                 setEmail={(v) => {
+                   this.setState({
+                     postData: {
+                       ...this.state.postData,
+                       email_address: v,
+                     },
+                   });
+                 }}
+ 
+                 setPhone={(v) => {
+                   this.setState({
+                     postData: {
+ 
+                       ...this.state.postData,
+                       phone_home: v,
+                     },
+                   });
+                 }}
+ 
+                 setURL={(v) => {
+                   this.setState({
+                     postData: {
+                       ...this.state.postData,
+                       entrance_url: v,
+                     }
+                   })
+                 }}
+ 
+ 
+                 postData={this.state.postData}
+              />
+            </Route>
+
 
           </Switch>
 

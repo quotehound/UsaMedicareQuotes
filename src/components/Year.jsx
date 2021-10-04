@@ -54,7 +54,7 @@ class Year extends Component {
             this.props.setDOB(month + '/' + day + '/' + year)
 
 
-            this.props.history.push();
+            this.props.history.push('/address' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + month + '&day=' + day + '&year=' + year);
         }
 
     }
