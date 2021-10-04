@@ -159,6 +159,7 @@ class Day extends Component {
 
                 </div>
 
+                <Footer />
 
             </div>
         )

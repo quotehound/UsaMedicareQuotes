@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 import './forms.css';
-
+import Footer from '../Footer';
 class Month extends Component {
 
 
@@ -17,7 +17,7 @@ class Month extends Component {
 
         const urlParams = new URLSearchParams(urlSearch);
 
-        const zip = urlParams.get('zip_code');
+    const zip = urlParams.get('zip_code');
     const lp = urlParams.get('lp_request_id');
     const ab = urlParams.get('ab');
     const gender = urlParams.get('gender')
@@ -122,6 +122,7 @@ class Month extends Component {
 
                 </div>
 
+                <Footer />
 
             </div>
 

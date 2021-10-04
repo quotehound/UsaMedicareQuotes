@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 
 import './forms.css';
-
+import Footer from '../Footer';
 
 
 class Gender extends Component {
@@ -33,7 +33,6 @@ class Gender extends Component {
     this.props.history.push('/month' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + g)
     
 
-    this.props.history.push();
 
   }
 
@@ -104,6 +103,7 @@ class Gender extends Component {
 
 
       </div>
+      <Footer />
 
       </div>
        

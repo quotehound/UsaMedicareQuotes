@@ -134,6 +134,8 @@ const year = urlParams.get('year');
 
 
             </div>
+            <Footer />
+
             </div>
         )
     }

@@ -17,6 +17,7 @@ import Year from './components/Year';
 import Address from './components/Address';
 import Name from './components/Name';
 import EmailPhone from './components/EmailPhone';
+import ThankYou from './components/ThankYou';
 class App extends Component {
 
   state = {
@@ -64,9 +65,28 @@ class App extends Component {
 			email_address	: '',
 			phone_home: '',
       entrance_url: '',
-      lp_request_id:'',
+      lp_request_id: document.getElementById('lp').value,
     }
   }
+
+  copyValuesToPostData2 = () => {
+    var tempArray = {
+      zip: this.state.postData.zip_code,
+    };
+    this.setState({ postData2: tempArray });
+    // var MediaAlphaExchange = { 
+    // 	"data": {
+    // 	   "zip": "",
+    // 	},
+    // 	"placement_id": "YiPFAJc_r0i9fsZr0uP7vvicsinK3Q",
+    // 	"sub_1": "test sub id",
+    // 	"type": "ad_unit",
+    // 	"version": 17
+    //  };
+     console.log("SetMA");
+//MediaAlphaExchange__load('mediaalpha_placeholder');
+    return this.state.postData2;
+  };
 
   changeRoute = () => {
     this.setState ({
@@ -249,13 +269,20 @@ class App extends Component {
               />
             </Route>
 
+            <Route path='/thank-you' exact>
+              <ThankYou
+
+                postData2={this.state.postData}
+    
+              />
+            </Route>
+
 
           </Switch>
 
-          <Footer />
         </div>
       
-      
+
       </BrowserRouter>
     )
   }

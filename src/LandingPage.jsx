@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {withRouter } from 'react-router';
 
 import './LandingPage.css';
+import Footer from './Footer';
 
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
@@ -197,7 +198,8 @@ class LandingPage extends Component {
 
 
 
-{/* Footer  */}
+{/* Footer  */}        <Footer />
+
 
             </div>
         )

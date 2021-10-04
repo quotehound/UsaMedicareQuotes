@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {withRouter} from 'react-router';
 
 import './forms.css';
+import Footer from '../Footer';
 
 
 class Enrolled extends Component {
@@ -89,6 +90,8 @@ class Enrolled extends Component {
 
 
       </div>
+
+      <Footer />
 
       </div>
         )

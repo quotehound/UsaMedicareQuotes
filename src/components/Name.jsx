@@ -4,6 +4,7 @@ import { withRouter } from 'react-router';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
+import Footer from '../Footer';
 import './forms.css';
 
 class Name extends Component {
@@ -180,6 +181,7 @@ const address = urlParams.get('address')
 
 
                 </div>
+                <Footer />
 
             </div>
         )
