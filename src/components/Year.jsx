@@ -59,6 +59,28 @@ class Year extends Component {
 
     }
 
+    skip = (values) => {
+
+        values.preventDefault();
+
+        let skip = '00'
+        const urlSearch = window.location.search;
+
+        const urlParams = new URLSearchParams(urlSearch);
+
+        const zip = urlParams.get('zip_code');
+        const lp = urlParams.get('lp_request_id');
+        const ab = urlParams.get('ab');
+    const gender = urlParams.get('gender');
+    const month = urlParams.get('month');
+    const day = urlParams.get('day');
+
+    this.props.setDOB(skip + '-' + month + '-' + day)
+
+
+    this.props.history.push('/address' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + month + '&day=' + day + '&year=' + skip);
+    }
+
 
     render() {
         return (
@@ -122,10 +144,10 @@ class Year extends Component {
 
                                             </div>                                        <button className="px-6 py-4 mb-3 m-2 text-md font-bold bg-blue-400 hover:bg-blue-600 hover:shadow-lg text-white rounded transition duration-200 nextButton" type="submit">Next</button>
 
-
+                                            
 
                                         </div>
-
+                                        <a onClick={this.skip}>Skip Question</a>
                                     </form>
 
                                 </div>

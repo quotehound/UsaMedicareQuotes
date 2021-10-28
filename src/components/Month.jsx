@@ -28,6 +28,28 @@ class Month extends Component {
         this.props.history.push('/day' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + m);
     }
 
+    skip = (values) => {
+        values.preventDefault();
+
+        let skip = '00';
+
+        this.props.setMonth(skip);
+
+        const urlSearch = window.location.search;
+
+        const urlParams = new URLSearchParams(urlSearch);
+
+    const zip = urlParams.get('zip_code');
+    const lp = urlParams.get('lp_request_id');
+    const ab = urlParams.get('ab');
+    const gender = urlParams.get('gender')
+
+       
+
+
+        this.props.history.push('/day' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + skip);
+    }
+
 
 
 
@@ -108,6 +130,7 @@ class Month extends Component {
 
                                             </div>
                                         </div>
+                                        <a onClick={this.skip}>Skip Question</a>
                                     </div>
 
                                 </form>

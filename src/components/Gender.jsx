@@ -36,6 +36,28 @@ class Gender extends Component {
 
   }
 
+  skip = (values) => {
+
+    values.preventDefault();
+    
+   
+    let skip = 'opt_out'
+    this.props.setGender(skip);
+
+    //get URL params
+
+    const urlSearch = window.location.search;
+
+    const urlParams = new URLSearchParams(urlSearch);
+
+    const zip = urlParams.get('zip_code');
+    const lp = urlParams.get('lp_request_id');
+    const ab = urlParams.get('ab');
+
+    this.props.history.push('/month' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + skip)
+
+  }
+
 
   render() {
     return (
@@ -90,6 +112,8 @@ class Gender extends Component {
                 
               </div>
             </div>
+
+            <a onClick={this.skip}> Skip Question </a>
           </div>
 
           </form>

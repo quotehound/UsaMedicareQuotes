@@ -130,7 +130,7 @@ class LandingPage extends Component {
 
         </span>
         <h3 className="mb-4 text-2xl font-bold font-heading" data-config-id="header3">Get Connected </h3>
-        <p className="text-lg text-black leading-loose max-w-lg mx-auto lg:px-12" data-config-id="desc3">Connect with real rates accross our network and geet connected with real rates.</p>
+        <p className="text-lg text-black leading-loose max-w-lg mx-auto lg:px-12" data-config-id="desc3">Connect to get real rates accross our network.</p>
 
 
       </div>
@@ -139,13 +139,13 @@ class LandingPage extends Component {
                   <img src={Money} className="startIcon"/>
 
         </span>
-        <h3 className="mb-4 text-2xl font-bold font-heading" data-config-id="header3">Save Money</h3>
-        <p className="text-lg text-black leading-loose max-w-lg mx-auto lg:px-12" data-config-id="desc3">Start saving money and relax with your brand new rates.</p>
+        <h3 className="mb-4 text-2xl font-bold font-heading" data-config-id="header3">May Save Money</h3>
+        <p className="text-lg text-black leading-loose max-w-lg mx-auto lg:px-12" data-config-id="desc3">Start saving money and relax with your updated rates.</p>
       </div>
     </div>
 
    <div className="inline-block mx-auto mb-6 flex items-center justify-center rounded-full p-10 "> 
-   <a className="inline-block mr-auto lg:mr-0 py-4 px-8 text-sm text-white font-medium leafing-normal bg-blue-400 hover:bg-blue-600 hover:shadow-lg rounded" onClick={this.autoFocusClick} data-config-id="primary-action">Get Your Free Quote</a>
+   <a className="inline-block mr-auto lg:mr-0 py-4 px-8 text-md text-white font-medium leafing-normal bg-blue-400 hover:bg-blue-600 hover:shadow-lg rounded" onClick={this.autoFocusClick} data-config-id="primary-action">Get Your No Obligation Free Quote</a>
 
    </div>
 

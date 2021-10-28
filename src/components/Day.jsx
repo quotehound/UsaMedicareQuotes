@@ -29,6 +29,28 @@ class Day extends Component {
       
     }
 
+    skip = (values) => {
+
+        values.preventDefault();
+
+        let skip = '00';
+
+        this.props.setDate(skip);
+
+        const urlSearch = window.location.search;
+
+        const urlParams = new URLSearchParams(urlSearch);
+
+        const zip = urlParams.get('zip_code');
+        const lp = urlParams.get('lp_request_id');
+        const ab = urlParams.get('ab');
+    const gender = urlParams.get('gender');
+    const month = urlParams.get('month');
+
+        this.props.history.push('/year' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + month + '&day=' + skip);
+
+    }
+
     render(){
 
         
@@ -145,6 +167,7 @@ class Day extends Component {
 
                                             </div>
                                         </div>
+                                        <a onClick={this.skip}>Skip Question</a>
                                     </div>
 
                                 </form>
