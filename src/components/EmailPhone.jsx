@@ -42,30 +42,6 @@ class EmailPhone extends Component {
         document.getElementById('tele').value = phone;
 
 
-        if(email.length < 2){
-
-            toast.error("Please enter your email");
-
-            values.preventDefault();
-
-        }
-        if (phone.length < 10) {
-            toast.error("😬 Please enter your phone number");
-
-            values.preventDefault();
-        }
-        if(email.length < 2 && phone.length < 10) {
-            toast.error("😬 There is an error, check the fields!")
-        }
-        else {
-            values.preventDefault();
-
-            toast.dismiss();
-
-           
-        }
-
-
         const urlSearch = window.location.search;
 
         const urlParams = new URLSearchParams(urlSearch);
@@ -124,6 +100,7 @@ const lastName = urlParams.get('last_name');
         let email = document.getElementById('email_address').value;
 
         this.props.setEmail(email);
+        this.unhide()
     }
 
     postPhone = (values) => {
@@ -135,6 +112,25 @@ const lastName = urlParams.get('last_name');
         console.log("updated phone is " + realPhone)
 
         this.props.setPhone(realPhone);
+
+        this.unhide()
+    }
+
+    unhide(){
+
+        let email = document.getElementById('email_address').value;
+        let phone = document.getElementById('phone_home').value;
+
+
+       if(email.length == 0 || phone.length == 0){
+           document.getElementById('next').hidden = true;
+       }
+       else{
+           toast.dismiss()
+           document.getElementById('next').hidden = false;
+
+       }
+
     }
 
     postMedicare = (postData) => {
@@ -254,8 +250,8 @@ const lastName = urlParams.get('last_name');
                                                
                                             </div>
 
-                                          
-                                            <button className="px-6 py-4 mb-3 m-2 text-md font-bold bg-blue-400 hover:bg-blue-600 hover:shadow-lg text-white rounded transition duration-200 " type="submit" onClick={this.postURL}>Get My Free Quote!</button>
+                                            <button className="px-6 py-4 mb-3 m-2 text-md font-bold bg-blue-400 hover:bg-blue-600 hover:shadow-lg text-white rounded transition duration-200 submitButton" id="next" type="submit" onClick={this.postURL} hidden={true} >Get My Free Quote!</button>
+
 
                                         </div>
                                         <p className="tcpa">   <input type="hidden" id="leadid_tcpa_disclosure" /> By pressing Get My Free Quote, I am providing my express written consent and e-signature which may be revoked at any time. I consent to receive emails, telephone calls, text messages, artificial or prerecorded messages from Us Medicare Quotes its affiliates, and/or any of our <a href="https://www.quotehound.com/partners"> marketing partners </a>  (or their service provider partners on their behalf) regarding their products and services (including Medicare Advantage plans, Medicare Part D Prescription Drug Plans or Medicare Supplement Insurance Plans) at the email address and telephone number provided, including my wireless phone number (if provided) utilizing an automated telephone dialing system. Telephone companies may impose additional charges on subscribers for messages.  I understand that I am not required to grant this consent as a condition of purchasing any property, goods, or services from the foregoing companies (2) I agree to this website's <a href="https://www.quotehound.com/privacy-policy"> Privacy Policy </a> and  <a href="https://www.quotehound.com/terms-conditions">Terms of Use</a>
