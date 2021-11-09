@@ -24,7 +24,7 @@ class NavBar extends Component {
 </ul> */}
 
 
-<div className="justify-self-end sm:grid flex flex-row items-center text-right">
+<div className="justify-self-end grid flex flex-row items-center text-right">
 <a className="text-center inline-block px-2 py-2 text-sm text-white font-bold leading-loose bg-blue-400 hover:bg-blue-600 rounded transition duration-200" href="tel:8887013068" data-config-id="04_button">888-701-3068</a> 
 <p className="text-sm font-bold"> TTTY: 711</p>
 <p className="text-sm font-bold">9AM - 6PM ET <br/> Monday - Friday </p>
