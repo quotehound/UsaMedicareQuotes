@@ -7,7 +7,7 @@ import Axios from 'axios';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
-import NumberFormat  from 'react-number-format';
+import PhoneInput from 'react-phone-number-input/input'
 
 class EmailPhone extends Component {
 
@@ -113,6 +113,12 @@ const lastName = urlParams.get('last_name');
 
         this.props.setPhone(realPhone);
 
+        if(phone.length < 14){
+           document.getElementById('next').hidden = true;
+
+            return
+        }
+
         this.unhide()
     }
 
@@ -122,8 +128,10 @@ const lastName = urlParams.get('last_name');
         let phone = document.getElementById('phone_home').value;
 
 
-       if(email.length == 0 || phone.length == 0){
+       if(email.length === 0 || phone.length === 0 && phone.length < 7){
            document.getElementById('next').hidden = true;
+
+          
        }
        else{
            toast.dismiss()
@@ -235,8 +243,15 @@ const lastName = urlParams.get('last_name');
 
 
                                                         <div className="w-full md:w-1/2 px-4 mb-4 md:mb-0" data-bucket={2}>
-                                                        <NumberFormat format="(###) ###-####" mask="_"  className="appearance-none w-full p-3 text-lg font-semibold leading-none bg-white rounded " id="phone_home" placeholder="Phone Number" name="phone_home" allowEmptyFormatting type='tel'
-                                                        onChange={this.postPhone}/>
+                                                        {/* <NumberFormat format="###-###-####" mask=""  className="appearance-none w-full p-3 text-lg font-semibold leading-none bg-white rounded " id="phone_home" placeholder="Phone Number" name="phone_home" allowEmptyFormatting type='tel'
+                                                        onChange={this.postPhone}/> */}
+                                                         <PhoneInput
+      country="US"
+      className="appearance-none w-full p-3 text-lg font-semibold leading-none bg-white rounded " id="phone_home" placeholder="Phone Number" name="phone_home" 
+      onChange={this.postPhone} 
+      minLength={10}
+      required
+      />
 
                                                         </div>
                                                     </div>
