@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@bugsnag/js": "^7.13.3",
+    "@bugsnag/plugin-react": "^7.13.2",
     "@craco/craco": "^6.3.0",
     "@tailwindcss/forms": "^0.3.4",
     "@testing-library/jest-dom": "^5.11.4",

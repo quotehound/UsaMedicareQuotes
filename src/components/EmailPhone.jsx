@@ -230,12 +230,12 @@ const lastName = urlParams.get('last_name');
                                                     <div className="flex flex-wrap -mx-4 -mb-4 md:mb-0" data-container={1}>
                                                         <div className="w-full md:w-1/2 px-4 mb-4 md:mb-0" data-bucket={1}>
 
-                                                            <input className="appearance-none w-full p-3 text-lg font-semibold leading-none bg-white rounded " type="email" name="email_address" placeholder="Email" id="email_address" onChange={this.postEmail}  />
+                                                            <input className="appearance-none w-full p-3 text-lg font-semibold leading-none bg-white rounded " type='email' name="email_address" placeholder="Email" id="email_address" onChange={this.postEmail}  />
                                                         </div>
 
 
                                                         <div className="w-full md:w-1/2 px-4 mb-4 md:mb-0" data-bucket={2}>
-                                                        <NumberFormat format="(###) ###-####" mask="_"  className="appearance-none w-full p-3 text-lg font-semibold leading-none bg-white rounded " id="phone_home" placeholder="Phone Number" name="phone_home" 
+                                                        <NumberFormat format="(###) ###-####" mask="_"  className="appearance-none w-full p-3 text-lg font-semibold leading-none bg-white rounded " id="phone_home" placeholder="Phone Number" name="phone_home" allowEmptyFormatting type='tel'
                                                         onChange={this.postPhone}/>
 
                                                         </div>

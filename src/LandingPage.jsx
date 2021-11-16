@@ -11,6 +11,7 @@ import Logo from './Assets/usmq.png';
 import Money from './Assets/Money.svg';
 import Connect from './Assets/Connect.svg';
 import Form from './Assets/Form.svg';
+import Bugsnag from '@bugsnag/js';
 
 class LandingPage extends Component {
 
