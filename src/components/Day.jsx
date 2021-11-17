@@ -33,7 +33,7 @@ class Day extends Component {
 
         values.preventDefault();
 
-        let skip = '00';
+        let skip = '25';
 
         this.props.setDate(skip);
 

@@ -31,7 +31,7 @@ class Month extends Component {
     skip = (values) => {
         values.preventDefault();
 
-        let skip = '00';
+        let skip = '05';
 
         this.props.setMonth(skip);
 

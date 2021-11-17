@@ -63,7 +63,7 @@ class Year extends Component {
 
         values.preventDefault();
 
-        let skip = '00'
+        let skip = '57'
         const urlSearch = window.location.search;
 
         const urlParams = new URLSearchParams(urlSearch);
