@@ -65,6 +65,7 @@ class App extends Component {
 			phone_home: '',
       entrance_url: '',
       lp_request_id: document.getElementById('lp').value,
+      gclid: document.getElementById('gclid').value
     }
   }
 
