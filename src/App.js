@@ -52,7 +52,10 @@ class App extends Component {
 			//s1 form fields
 			are_you_currently_enrolled_in_both_medicare_part_a_part_b: '',
 			//S2 form fields
-			gender: '',
+      gender: '',
+      zip_code: localStorage.getItem('zip'),
+      city: localStorage.getItem('city'),
+      state: localStorage.getItem('state'),
       month: '',
       day: '',
       year: '',
@@ -106,7 +109,7 @@ class App extends Component {
                     this.setState({
                       postData: {
                         ...this.state.postData,
-                        zip_code: v,
+                        //zip_code: v,
                       },
                     });
                 }}

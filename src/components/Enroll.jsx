@@ -9,6 +9,8 @@ class Enrolled extends Component {
 
   onLoad() {
 
+
+    console.log('on load function started')
     const urlSearch = window.location.search;
 
     const urlParams = new URLSearchParams(urlSearch);
