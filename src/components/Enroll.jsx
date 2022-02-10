@@ -19,7 +19,7 @@ class Enrolled extends Component {
       const newCity = urlParams.get('city');
       const newState = urlParams.get('state');
       const rf = urlParams.get('refferal_url');
-      const lp = urlParams.get('lp_request_id');
+      const lp = urlParams.get('lp');
       const hp = urlParams.get('health_insurance_plan')
       const pec = urlParams.get('pre_existing_conditions');
 
