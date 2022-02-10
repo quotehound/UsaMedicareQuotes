@@ -53,7 +53,7 @@ class App extends Component {
 			are_you_currently_enrolled_in_both_medicare_part_a_part_b: '',
 			//S2 form fields
       gender: '',
-      zip_code: localStorage.getItem('zip'),
+      zip_code: document.getElementById('zipCode'),
       city: localStorage.getItem('city'),
       state: localStorage.getItem('state'),
       month: '',

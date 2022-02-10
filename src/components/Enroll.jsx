@@ -20,6 +20,25 @@ class Enrolled extends Component {
       const newState = urlParams.get('state');
       const rf = urlParams.get('refferal_url');
       const lp = urlParams.get('lp_request_id');
+      const hp = urlParams.get('health_insurance_plan')
+      const pec = urlParams.get('pre_existing_conditions');
+
+      document.getElementById('hp').value = hp;
+      document.getElementById('pec').value = pec;
+      
+      localStorage.setItem('zip', newZip);
+  
+      document.getElementById('zipCode').value = newZip
+      document.getElementById('zip').value = newZip;
+
+      
+
+    localStorage.setItem('city', newCity);
+    localStorage.setItem('state', newState);
+
+    document.getElementById('city').value = newCity;
+      document.getElementById('state').value = newState; 
+
   
       localStorage.clear();
 
@@ -27,24 +46,8 @@ class Enrolled extends Component {
       if (lp) {
         document.getElementById('lp').value = lp;
       }
-      else {
-        return
-      }
       if (rf) {
         console.log('rf was true, ls cleared');
-  
-        localStorage.setItem('zip', newZip);
-  
-        document.getElementById('zipCode').value = newZip
-        document.getElementById('zip').value = newZip;
-  
-        
-  
-      localStorage.setItem('city', newCity);
-      localStorage.setItem('state', newState);
-  
-      document.getElementById('city').value = newCity;
-        document.getElementById('state').value = newState; 
   
     }
   
