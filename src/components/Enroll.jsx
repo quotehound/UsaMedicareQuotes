@@ -7,9 +7,7 @@ import Footer from '../Footer';
 
 class Enrolled extends Component {
 
-  onLoad() {
-
-
+  componentDidMount() {
     console.log('on load function started')
     const urlSearch = window.location.search;
 
@@ -45,6 +43,12 @@ class Enrolled extends Component {
     document.getElementById('city').value = city;
       document.getElementById('state').value = state; 
 
+  }
+
+  onLoad() {
+
+
+   
     }
 
 
