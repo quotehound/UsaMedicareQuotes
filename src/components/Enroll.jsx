@@ -40,7 +40,6 @@ class Enrolled extends Component {
       document.getElementById('state').value = newState; 
 
   
-      localStorage.clear();
 
 
       if (lp) {
