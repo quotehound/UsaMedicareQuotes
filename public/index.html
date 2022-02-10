@@ -135,7 +135,7 @@ LeadiDscript.parentNode.insertBefore(s, LeadiDscript);
   <input type="hidden" id="lp" name="lp" /> 
   <input type="hidden" id="gclid" name="gclid" /> 
   <input type="hidden" id="url" name='url' />
-  <input type="hidden" id="tele" name="tele" defaultValue />
+  <input type="hidden" id="tele" name="tele" />
   
   <input type="hidden" name="zip" id="zipCode" />
   <input type="hidden" name="city" id="city" />
@@ -153,6 +153,21 @@ LeadiDscript.parentNode.insertBefore(s, LeadiDscript);
 
     document.getElementById('lp').value = lp;
     document.getElementById('gclid').value = gclid;
+
+    const newZip = urlParams.get('zip_code');
+      const newCity = urlParams.get('city');
+      const newState = urlParams.get('state');
+
+      document.getElementById('zipCode').value = newZip
+        document.getElementById('zip').value = newZip;
+  
+        
+  
+      localStorage.setItem('city', newCity);
+      localStorage.setItem('state', newState);
+  
+      document.getElementById('city').value = newCity;
+        document.getElementById('state').value = newState; 
     </script> 
 
 
