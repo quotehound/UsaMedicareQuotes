@@ -8,43 +8,47 @@ import Footer from '../Footer';
 class Enrolled extends Component {
 
   componentDidMount() {
-    console.log('on load function started')
-    const urlSearch = window.location.search;
 
-    const urlParams = new URLSearchParams(urlSearch);
-
-    const zip = urlParams.get('zip_code');
-    const city = urlParams.get('city');
-    const state = urlParams.get('state');
-    const rf = urlParams.get('refferal_url');
-    const lp = urlParams.get('lp_request_id');
-
-    if (lp) {
-      document.getElementById('lp').value = lp;
+    setTimeout(() => {
+      console.log('on load function started')
+      const urlSearch = window.location.search;
+  
+      const urlParams = new URLSearchParams(urlSearch);
+  
+      const zip = urlParams.get('zip_code');
+      const city = urlParams.get('city');
+      const state = urlParams.get('state');
+      const rf = urlParams.get('refferal_url');
+      const lp = urlParams.get('lp_request_id');
+  
+      if (lp) {
+        document.getElementById('lp').value = lp;
+      }
+      else {
+        return
+      }
+      if (rf) {
+        localStorage.clear();
+        console.log('rf was true, ls cleared');
+  
+        localStorage.setItem('zip', zip);
+  
+        document.getElementById('zipCode').value = zip
+        document.getElementById('zip').value = zip;
+  
+        let zipVal = localStorage.getItem('zip');
+  
+  
+      localStorage.setItem('city', city);
+      localStorage.setItem('state', state);
+  
+      document.getElementById('city').value = city;
+        document.getElementById('state').value = state; 
+  
     }
-    else {
-      return
-    }
-    if (rf) {
-      localStorage.clear();
-      console.log('rf was true, ls cleared');
-
-      localStorage.setItem('zip', zip);
-
-      document.getElementById('zipCode').value = zip
-      document.getElementById('zip').value = zip;
-
-      let zipVal = localStorage.getItem('zip');
-
-
-    localStorage.setItem('city', city);
-    localStorage.setItem('state', state);
-
-    document.getElementById('city').value = city;
-      document.getElementById('state').value = state; 
-
-  }
-
+  
+    }, 0)
+  
 
 
   }
