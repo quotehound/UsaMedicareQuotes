@@ -68,7 +68,10 @@ class App extends Component {
 			phone_home: '',
       entrance_url: '',
       lp_request_id: document.getElementById('lp').value,
-      gclid: document.getElementById('gclid').value
+      gclid: document.getElementById('gclid').value,
+      health_insurance_plan: 'Individual Family',
+      pre_existing_conditions: 'no',
+
     }
   }
 
