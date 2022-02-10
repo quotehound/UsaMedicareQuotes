@@ -24,6 +24,43 @@ gtag('config', 'UA-144726423-12');
 	  
 <meta name="facebook-domain-verification" content="g958svbsmdtkobqrek26fqzzijctux" />
 
+<script
+src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+crossorigin="anonymous"
+></script>
+
+<script>
+var requestOptions = {
+  async: true,
+  crossDomain: true,
+  method: "GET",
+  redirect: "follow",
+  url: "https://geolocation-db.com/json/8dd79c70-0801-11ec-a29f-e381a788c2c0",
+};
+
+$.ajax(requestOptions).done(function (response) {
+  console.log(response);
+
+  var parse = JSON.parse(response);
+
+  let zip = parse.postal;
+  let city = parse.city;
+  let state = parse.state;
+
+  localStorage.setItem("zip", zip);
+
+  localStorage.setItem("city", city);
+  localStorage.setItem("state", state);
+
+  document.getElementById("zipCode").value = zip;
+  document.getElementById("zip").value = zip;
+  document.getElementById("city").value = city;
+  document.getElementById("state").value = state;
+
+  
+});
+</script>
 
 
     <script type="text/javascript">
@@ -99,6 +136,11 @@ LeadiDscript.parentNode.insertBefore(s, LeadiDscript);
   <input type="hidden" id="gclid" name="gclid" /> 
   <input type="hidden" id="url" name='url' />
   <input type="hidden" id="tele" name="tele" defaultValue />
+  
+  <input type="hidden" name="zip" id="zipCode" />
+  <input type="hidden" name="city" id="city" />
+  <input type="hidden" name="state" id="state" />
+
 
 
   <script> 

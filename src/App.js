@@ -109,7 +109,16 @@ class App extends Component {
                         zip_code: v,
                       },
                     });
-                  }}
+                }}
+                
+                setLp={(u) => {
+                  this.setState({
+                    postData: {
+                      ...this.state.postData,
+                      lp_request_id: document.getElementById('lp').value
+                    }
+                  })
+                }}
                 
                 />
               </Route>
