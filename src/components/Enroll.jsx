@@ -45,12 +45,6 @@ class Enrolled extends Component {
 
   }
 
-  onLoad() {
-
-
-   
-    }
-
 
 
   }
