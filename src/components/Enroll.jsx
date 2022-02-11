@@ -43,6 +43,7 @@ class Enrolled extends Component {
       localStorage.setItem('zip', newZip)
       localStorage.setItem('city', newCity)
       localStorage.setItem('state', newState)
+      localStorage.setItem('lp', lp)
   
       console.log(localStorage)
 
