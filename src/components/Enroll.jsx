@@ -10,6 +10,11 @@ class Enrolled extends Component {
   componentDidMount() {
 
     setTimeout(() => {
+
+      document.getElementById('zipCode').value = '';
+      document.getElementById('city').value = '';
+      document.getElementById('state').value = '';
+    
       console.log('on load function started')
       const urlSearch = window.location.search;
   
@@ -24,9 +29,16 @@ class Enrolled extends Component {
       const pec = urlParams.get('pre_existing_conditions');
 
       console.log('zip codee is ', newZip)
+      console.log('City is ', newCity)
+      console.log('State is ', newState)
+      
 
       document.getElementById('hp').value = hp;
       document.getElementById('pec').value = pec;
+      document.getElementById('zipCode').value = newZip;
+      document.getElementById('city').value = city;
+      document.getElementById('state').value = state;
+  
  
       if (lp) {
         document.getElementById('lp').value = lp;
@@ -56,21 +68,7 @@ class Enrolled extends Component {
     
         const zip = urlParams.get('zip');
       const lp = urlParams.get('lp_request_id');
-      const newCity = urlParams.get('city');
-      const newState = urlParams.get('state');
-
-      localStorage.clear();
     
-      
-      document.getElementById('zipCode').value = zip
-
-      
-
-    localStorage.setItem('city', newCity);
-    localStorage.setItem('state', newState);
-
-    document.getElementById('city').value = newCity;
-      document.getElementById('state').value = newState; 
 
         this.props.history.push('/gender' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&ab=' + v)
 
