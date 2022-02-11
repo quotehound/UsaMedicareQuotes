@@ -40,7 +40,7 @@ class Enrolled extends Component {
       document.getElementById('state').value = newState;
 
 
-      localStorage.setItem('zipCode', newZip)
+      localStorage.setItem('zip', newZip)
       localStorage.setItem('city', newCity)
       localStorage.setItem('state', newState)
   

@@ -31,7 +31,12 @@ crossorigin="anonymous"
 ></script>
 
 <script>
-var requestOptions = {
+
+  let homepage = window.location.href;
+
+  if( homepage === '/')
+  {
+    var requestOptions = {
   async: true,
   crossDomain: true,
   method: "GET",
@@ -60,6 +65,12 @@ $.ajax(requestOptions).done(function (response) {
 
   
 });
+  }
+
+  else {
+    return;
+  }
+
 </script>
 
 
