@@ -54,11 +54,12 @@ class Enrolled extends Component {
 
         const urlParams = new URLSearchParams(urlSearch);
     
-        const zip = urlParams.get('zip_code');
+        const zip = urlParams.get('zip');
       const lp = urlParams.get('lp_request_id');
       const newCity = urlParams.get('city');
       const newState = urlParams.get('state');
 
+      localStorage.clear();
     
       
       document.getElementById('zipCode').value = zip
