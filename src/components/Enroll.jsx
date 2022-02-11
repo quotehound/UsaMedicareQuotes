@@ -36,8 +36,8 @@ class Enrolled extends Component {
       document.getElementById('hp').value = hp;
       document.getElementById('pec').value = pec;
       document.getElementById('zipCode').value = newZip;
-      document.getElementById('city').value = city;
-      document.getElementById('state').value = state;
+      document.getElementById('city').value = newCity;
+      document.getElementById('state').value = newState;
   
  
       if (lp) {
