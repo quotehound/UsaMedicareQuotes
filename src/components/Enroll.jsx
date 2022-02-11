@@ -23,6 +23,8 @@ class Enrolled extends Component {
       const hp = urlParams.get('health_insurance_plan')
       const pec = urlParams.get('pre_existing_conditions');
 
+      console.log('zip codee is ', newZip)
+
       document.getElementById('hp').value = hp;
       document.getElementById('pec').value = pec;
       
