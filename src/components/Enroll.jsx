@@ -15,7 +15,7 @@ class Enrolled extends Component {
   
       const urlParams = new URLSearchParams(urlSearch);
   
-      const newZip = urlParams.get('zip_code');
+      const newZip = urlParams.get('zip');
       const newCity = urlParams.get('city');
       const newState = urlParams.get('state');
       const rf = urlParams.get('refferal_url');
