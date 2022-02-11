@@ -38,7 +38,16 @@ class Enrolled extends Component {
       document.getElementById('zipCode').value = newZip;
       document.getElementById('city').value = newCity;
       document.getElementById('state').value = newState;
+
+      localStorage.clear();
+
+      console.log('local storage cleeared')
+      localStorage.setItem('zipCode', newZip)
+      localStorage.setItem('city', newCity)
+      localStorage.setItem('state', newState)
   
+      console.log(localStorage)
+
  
       if (lp) {
         document.getElementById('lp').value = lp;
