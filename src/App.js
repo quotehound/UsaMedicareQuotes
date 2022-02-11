@@ -50,7 +50,8 @@ class App extends Component {
 			IP_Address: '',
 			user_agent: navigator.userAgent,
 			//s1 form fields
-			are_you_currently_enrolled_in_both_medicare_part_a_part_b: '',
+      are_you_currently_enrolled_in_both_medicare_part_a_part_b: '',
+      lp_request_id: localStorage.getItem('lp'),
 			//S2 form fields
       gender: '',
       month: '',
@@ -63,7 +64,6 @@ class App extends Component {
 			email_address	: '',
 			phone_home: '',
       entrance_url: '',
-      lp_request_id: document.getElementById('lp').value,
       gclid: document.getElementById('gclid').value,
       health_insurance_plan: 'Individual Family',
       pre_existing_conditions: 'no',
@@ -113,14 +113,7 @@ class App extends Component {
                     });
                 }}
                 
-                setLp={(u) => {
-                  this.setState({
-                    postData: {
-                      ...this.state.postData,
-                      lp_request_id: document.getElementById('lp').value
-                    }
-                  })
-                }}
+               
                 
                 />
               </Route>
@@ -138,7 +131,6 @@ class App extends Component {
                             zip_code: localStorage.getItem('zipCode'),
       city: localStorage.getItem('city'),
                             state: localStorage.getItem('state'),
-                            lp_request_id: localStorage.getItem('lp')
       
                           },
                         });

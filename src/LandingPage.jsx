@@ -115,7 +115,11 @@ const urlSearch = window.location.search;
 const urlParams = new URLSearchParams(urlSearch)
 
 const lp = urlParams.get('lp_request_id');
-const gclid = urlParams.get('gclid');
+    const gclid = urlParams.get('gclid');
+    
+
+    const city = localStorage.getItem('city');
+    const state = localStorage.getItem('state');
 
     this.props.setLp(lp)
 
@@ -192,7 +196,7 @@ this.props.history.push('/enrolled' + '?lp_request_id=' + lp + '&zip_code=' + zi
                   <img src={Form} className="startIcon" />
 
         </span>
-        <h3 className="mb-4 text-2xl font-bold font-heading" data-config-id="header3">Fill Out Our Simple Form</h3>
+        <h3 className="mb-4 text-2xl font-bold font-heading" data-config-id="header3">Fill Out Our Inquiry Form</h3>
         <p className="text-lg text-black leading-loose max-w-lg mx-auto lg:px-12" data-config-id="desc3">Our Form is simple and easy! Finish it in 2 minutes</p>
       </div>
       <div className="w-full lg:w-1/3 px-4 mb-12 lg:mb-0 text-center">
@@ -201,7 +205,7 @@ this.props.history.push('/enrolled' + '?lp_request_id=' + lp + '&zip_code=' + zi
 
         </span>
         <h3 className="mb-4 text-2xl font-bold font-heading" data-config-id="header3">Get Connected </h3>
-        <p className="text-lg text-black leading-loose max-w-lg mx-auto lg:px-12" data-config-id="desc3">Connect to get real rates accross our network.</p>
+        <p className="text-lg text-black leading-loose max-w-lg mx-auto lg:px-12" data-config-id="desc3">Connect to get real rates accross our partners.</p>
 
 
       </div>
@@ -211,7 +215,7 @@ this.props.history.push('/enrolled' + '?lp_request_id=' + lp + '&zip_code=' + zi
 
         </span>
         <h3 className="mb-4 text-2xl font-bold font-heading" data-config-id="header3">May Save Money</h3>
-        <p className="text-lg text-black leading-loose max-w-lg mx-auto lg:px-12" data-config-id="desc3">Start saving money and relax with your updated rates.</p>
+        <p className="text-lg text-black leading-loose max-w-lg mx-auto lg:px-12" data-config-id="desc3">Explore current rates in your area</p>
       </div>
     </div>
 
@@ -238,7 +242,7 @@ this.props.history.push('/enrolled' + '?lp_request_id=' + lp + '&zip_code=' + zi
             </svg>
           </div>
           <div className="max-w-sm">
-            <h3 className="mb-2 text-xl leading-loose text-gray-600" data-config-id="header1"><b>No</b> Medical Exams</h3>
+            <h3 className="mb-2 text-xl leading-loose text-gray-600" data-config-id="header1"><b>Online form </b></h3>
           </div>
         </div>
         <div className="flex items-start py-4">
@@ -248,7 +252,7 @@ this.props.history.push('/enrolled' + '?lp_request_id=' + lp + '&zip_code=' + zi
             </svg>
           </div>
           <div className="max-w-sm">
-            <h3 className="mb-2 text-xl leading-loose text-gray-600" data-config-id="header2"><b>No</b> Waiting Period</h3>
+            <h3 className="mb-2 text-xl leading-loose text-gray-600" data-config-id="header2"><b>Friendly</b> agents</h3>
           </div>
         </div>
         <div className="flex items-start py-4">

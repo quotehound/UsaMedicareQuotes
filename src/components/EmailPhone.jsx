@@ -265,7 +265,7 @@ const lastName = urlParams.get('last_name');
                                                
                                             </div>
 
-                                            <button className="px-6 py-4 mb-3 m-2 text-md font-bold bg-blue-400 hover:bg-blue-600 hover:shadow-lg text-white rounded transition duration-200 submitButton" id="next" type="submit" onClick={this.postURL} hidden={true} >Get My Free Quote!</button>
+                                           
 
 
                                         </div>
@@ -274,7 +274,9 @@ const lastName = urlParams.get('last_name');
                                         <input type="hidden" id="leadid_tcpa_disclosure" /> By pressing Get My Free Quote, I am providing my express written consent and e-signature which may be revoked at any time. I consent to receive emails, telephone calls, text messages, artificial or prerecorded messages from Us Medicare Quotes its affiliates, and/or any of our <a href="https://www.quotehound.com/partners"> marketing partners </a>  (or their service provider partners on their behalf) regarding their products and services (including Medicare Advantage plans, Medicare Part D Prescription Drug Plans or Medicare Supplement Insurance Plans) at the email address and telephone number provided, including my wireless phone number (if provided) utilizing an automated telephone dialing system. Telephone companies may impose additional charges on subscribers for messages.  I understand that I am not required to grant this consent as a condition of purchasing any property, goods, or services from the foregoing companies or prerecorded or artificial voices. (1) I consent to electronic video monitoring and recordation of my activities on this Site. I may call <a href='tel:18884261036'> (888) 426-1036 </a> to speak with someone about obtaining an insurance quote.   I acknowledge that I may revoke my consent by emailing “STOP” to <a href="mailto:optout@quotehound.com">optout@quotehound.com.</a>  (2) I agree to this website's <a href="https://www.quotehound.com/privacy-policy"> Privacy Policy </a> and  <a href="https://www.quotehound.com/terms-conditions">Terms of Use</a> 
 
                                         </label>
-</p>
+                                        </p>
+                                        
+                                        <button className="px-6 py-4 mb-3 m-2 text-md font-bold bg-blue-400 hover:bg-blue-600 hover:shadow-lg text-white rounded transition duration-200 submitButton" id="next" type="submit" onClick={this.postURL} hidden={true} >Get My Free Quote!</button>
                                     </form>
 
                                 </div>
