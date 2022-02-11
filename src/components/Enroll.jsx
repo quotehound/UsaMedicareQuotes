@@ -27,23 +27,7 @@ class Enrolled extends Component {
 
       document.getElementById('hp').value = hp;
       document.getElementById('pec').value = pec;
-      
-      localStorage.setItem('zip', newZip);
-  
-      document.getElementById('zipCode').value = newZip
-      document.getElementById('zip').value = newZip;
-
-      
-
-    localStorage.setItem('city', newCity);
-    localStorage.setItem('state', newState);
-
-    document.getElementById('city').value = newCity;
-      document.getElementById('state').value = newState; 
-
-  
-
-
+ 
       if (lp) {
         document.getElementById('lp').value = lp;
       }
@@ -72,12 +56,21 @@ class Enrolled extends Component {
     
         const zip = urlParams.get('zip_code');
       const lp = urlParams.get('lp_request_id');
-      const newZip = urlParams.get('zip_code');
       const newCity = urlParams.get('city');
       const newState = urlParams.get('state');
 
     
       
+      document.getElementById('zipCode').value = zip
+      document.getElementById('zip').value = zip;
+
+      
+
+    localStorage.setItem('city', newCity);
+    localStorage.setItem('state', newState);
+
+    document.getElementById('city').value = newCity;
+      document.getElementById('state').value = newState; 
 
         this.props.history.push('/gender' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&ab=' + v)
 
