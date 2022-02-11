@@ -63,7 +63,6 @@ class Enrolled extends Component {
     
       
       document.getElementById('zipCode').value = zip
-      document.getElementById('zip').value = zip;
 
       
 
