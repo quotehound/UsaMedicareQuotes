@@ -43,16 +43,23 @@ class Enrolled extends Component {
       localStorage.setItem('zip', newZip)
       localStorage.setItem('city', newCity)
       localStorage.setItem('state', newState)
-      localStorage.setItem('lp', lp)
-  
-      console.log(localStorage)
 
  
-      if (lp) {
+      if (lp === null) {
+        document.getElementById('lp').value = '';
+        localStorage.setItem('lp', '')
+
+        console.log('lp was null')
+      }
+      else {
         document.getElementById('lp').value = lp;
+
+        localStorage.setItem('lp', lp)
+        console.log('lp was present')
+
       }
       if (rf) {
-        console.log('rf was true, ls cleared');
+        console.log('rf was true');
   
     }
   
