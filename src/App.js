@@ -112,6 +112,15 @@ class App extends Component {
                       },
                     });
                 }}
+
+                setLp={(v) => {
+                  this.setState({
+                    postData: {
+                      ...this.state.postData,
+                      LandingPage: v,
+                    }
+                  })
+                }}
                 
                
                 
