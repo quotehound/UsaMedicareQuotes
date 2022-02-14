@@ -77,12 +77,14 @@ class Enrolled extends Component {
         const zip = urlParams.get('zip');
       var lp = urlParams.get('lp_request_id');
 
-      localStorage.removeItem(lp);
 
       if (lp === null) {
-        localStorage.setItem(lp, '')
+
+        var lp = ''
+        localStorage.setItem(lp, lp)
       }
       else {
+        var lp = urlParams.get('lp_request_id')
         localStorage.setItem(lp, lp)
       }
 
