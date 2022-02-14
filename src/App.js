@@ -51,7 +51,7 @@ class App extends Component {
 			user_agent: navigator.userAgent,
 			//s1 form fields
       are_you_currently_enrolled_in_both_medicare_part_a_part_b: '',
-      lp_request_id: localStorage.getItem('lp'),
+      lp_request_id: document.getElementById('lp').value,
       
 			//S2 form fields
       gender: '',
