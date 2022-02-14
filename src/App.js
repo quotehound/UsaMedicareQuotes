@@ -51,7 +51,8 @@ class App extends Component {
 			user_agent: navigator.userAgent,
 			//s1 form fields
       are_you_currently_enrolled_in_both_medicare_part_a_part_b: '',
-      
+      household_income: '50000',
+
 			//S2 form fields
       gender: '',
       month: '',
