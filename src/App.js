@@ -117,7 +117,7 @@ class App extends Component {
                   this.setState({
                     postData: {
                       ...this.state.postData,
-                      LandingPage: v,
+                      //lp_request_id: v,
                     }
                   })
                 }}
