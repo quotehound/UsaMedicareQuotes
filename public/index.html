@@ -30,11 +30,13 @@ integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 crossorigin="anonymous"
 ></script>
 
+
+
 <script>
 
   let homepage = window.location.href;
 
-  if( homepage === '/')
+  if( homepage === '/' || 'localhost:3000')
   {
     var requestOptions = {
   async: true,
@@ -65,7 +67,7 @@ $.ajax(requestOptions).done(function (response) {
 
   
 });
-  }
+  
 
 
 </script>
@@ -163,6 +165,12 @@ LeadiDscript.parentNode.insertBefore(s, LeadiDscript);
     const gclid = urlParams.get('gclid');
 
     document.getElementById('lp').value = lp;
+
+    let lval =  document.getElementById('lp').value;
+
+    if(lval = null){
+      document.getElementById('lp').value = '';
+    }
     document.getElementById('gclid').value = gclid;
 
     </script> 

@@ -112,9 +112,13 @@ console.log('success', zipValue)
 this.setState({ zip_code: zipValue })
 
 const urlSearch = window.location.search;
-const urlParams = new URLSearchParams(urlSearch)
+    const urlParams = new URLSearchParams(urlSearch)
 
-const lp = urlParams.get('lp_request_id');
+      var lp = urlParams.get('lp_request_id');
+
+    if (lp === null) {
+      var lp = '';
+}
     const gclid = urlParams.get('gclid');
     
 

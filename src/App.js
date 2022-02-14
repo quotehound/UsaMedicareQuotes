@@ -137,7 +137,7 @@ class App extends Component {
                       trusted_form_cert_id: document.getElementById('xxTrustedFormToken_0').value,
                       coverage_time: v,
                             are_you_currently_enrolled_in_both_medicare_part_a_part_b: v,
-                            zip_code: localStorage.getItem('zipCode'),
+                            zip_code: document.getElementById('zipCode').value,
       city: localStorage.getItem('city'),
                             state: localStorage.getItem('state'),
       
