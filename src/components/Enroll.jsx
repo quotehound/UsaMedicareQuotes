@@ -81,11 +81,11 @@ class Enrolled extends Component {
       if (lp === null) {
 
         var lp = ''
-        localStorage.setItem(lp, lp)
+        localStorage.setItem('lp', lp)
       }
       else {
         var lp = urlParams.get('lp_request_id')
-        localStorage.setItem(lp, lp)
+        localStorage.setItem('lp', lp)
       }
 
       console.log(localStorage)

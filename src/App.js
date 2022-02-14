@@ -52,6 +52,7 @@ class App extends Component {
 			//s1 form fields
       are_you_currently_enrolled_in_both_medicare_part_a_part_b: '',
       lp_request_id: localStorage.getItem('lp'),
+      
 			//S2 form fields
       gender: '',
       month: '',
@@ -199,8 +200,8 @@ class App extends Component {
                 setDOB={(v) => {  
                   this.setState({
                     postData: {
-                    ...this.state.postData,
-                    dob: v,
+                      ...this.state.postData,
+                      dob: v,
                     },
                   });
                 }}
