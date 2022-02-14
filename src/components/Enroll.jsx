@@ -75,7 +75,18 @@ class Enrolled extends Component {
         const urlParams = new URLSearchParams(urlSearch);
     
         const zip = urlParams.get('zip');
-      const lp = urlParams.get('lp_request_id');
+      var lp = urlParams.get('lp_request_id');
+
+      localStorage.removeItem(lp);
+
+      if (lp === null) {
+        localStorage.setItem(lp, '')
+      }
+      else {
+        localStorage.setItem(lp, lp)
+      }
+
+      console.log(localStorage)
     
 
         this.props.history.push('/gender' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&ab=' + v)
