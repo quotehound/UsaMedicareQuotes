@@ -8,7 +8,7 @@ import './App.css';
 import NavBar from './NavBar';
 import Footer from './Footer'
 import LandingPage from './LandingPage';
-
+import Age from './Age'
 import Enrolled from './components/Enroll';
 import Gender from './components/Gender';
 import Month from './components/Month';
@@ -24,6 +24,7 @@ class App extends Component {
     route: '/',
     routes: [
       '/',
+      '/age',
       '/enrolled',
       '/gender',
       '/month',
@@ -68,6 +69,7 @@ class App extends Component {
       gclid: document.getElementById('gclid').value,
       health_insurance_plan: 'Individual Family',
       pre_existing_conditions: 'no',
+
 
     }
   }
@@ -127,6 +129,10 @@ class App extends Component {
                 
                 />
               </Route>
+
+            <Route path='/age' exact>
+              <Age />
+            </Route>
 
               <Route path='/enrolled' exact>
                   <Enrolled

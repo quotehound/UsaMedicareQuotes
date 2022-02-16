@@ -132,7 +132,7 @@ const urlSearch = window.location.search;
     this.props.setLp(lp)
 
 console.log('updated props with value: ', zipValue);
-this.props.history.push('/enrolled' + '?lp=' + lp + '&zip=' + zipValue + '&city=' + city + '&state=' + state);
+this.props.history.push('/age' + '?lp=' + lp + '&zip=' + zipValue + '&city=' + city + '&state=' + state);
 
   }
 
