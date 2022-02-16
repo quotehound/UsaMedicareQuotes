@@ -23,7 +23,7 @@ class Age extends Component {
 
     const zip = urlParams.get('zip_code');
 
-    const lp = urlParams.get('lp_request_id')
+    const lp = urlParams.get('lp')
 
     const city = document.getElementById('city').value;
     const state = document.getElementById('state').value;
@@ -41,13 +41,13 @@ class Age extends Component {
 
     const zip = urlParams.get('zip_code');
 
-    const lp = urlParams.get('lp_request_id')
+    const lp = urlParams.get('lp')
 
     const city = document.getElementById('city').value;
     const state = document.getElementById('state').value;
     const rf = 'usmedicarequotes.com';
 
-    window.location.href = 'https://www.usahealthquotes.com/coverage-time' + '?lp=' + lp + '&zip_code=' +  zip + '&city=' + city + '&state=' + state;
+    window.location.href = 'https://www.usahealthquotes.com/coverage-time' + '?lp=' + lp + '&zip=' +  zip + '&city=' + city + '&state=' + state + '&rf=usmedicarequotes.com' ;
 
   }
 
