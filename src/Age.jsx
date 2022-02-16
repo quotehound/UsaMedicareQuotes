@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 
   
 import { withRouter } from 'react-router';
-import NavBar from './Navbar';
 
 import './forms.css';
 import { Link } from 'react-router-dom';
