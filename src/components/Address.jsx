@@ -12,49 +12,70 @@ import 'react-toastify/dist/ReactToastify.min.css';
 class Address extends Component {
 
     constructor(props) {
-    super(props);
+        super(props);
 
-    this.state = {address: ''};
+        this.state = { address: '' };
 
-    this.nextStep = this.nextStep.bind(this);
-    this.nextStep = this.nextStep.bind(this);
-  }
+        this.nextStep = this.nextStep.bind(this);
+        this.nextStep = this.nextStep.bind(this);
+    }
 
 
-  nextStep = (values) =>  { 
+    nextStep = (values) => {
         
-    let address = document.getElementById('address').value;
+        let address = document.getElementById('address').value;
 
-    const urlSearch = window.location.search;
+        const urlSearch = window.location.search;
 
-    const urlParams = new URLSearchParams(urlSearch);
+        const urlParams = new URLSearchParams(urlSearch);
 
-    const zip = urlParams.get('zip_code');
-    const lp = urlParams.get('lp_request_id');
-    const ab = urlParams.get('ab');
-const gender = urlParams.get('gender');
-const month = urlParams.get('month');
-const day = urlParams.get('day');
-const year = urlParams.get('year');
+        const zip = urlParams.get('zip_code');
+        const lp = urlParams.get('lp_request_id');
+        const ab = urlParams.get('ab');
+        const gender = urlParams.get('gender');
+        const month = urlParams.get('month');
+        const day = urlParams.get('day');
+        const year = urlParams.get('year');
 
-    if(address.length < 4){
-        toast.error("😬 Please enter a valid address!");   
+        if (address.length < 4) {
+            toast.error("😬 Please enter a valid address!");
+            values.preventDefault();
+
+        }
+        else {
+
+            values.preventDefault();
+            toast.dismiss();
+            console.log("success: ", address);
+
+
+            this.props.setAddress(address);
+
+            this.props.history.push('/name' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + month + '&day=' + day + '&year=' + year + '&address=' + address);
+        }
+      
+    }
+    
+    skip = (values) => {
         values.preventDefault();
 
+        let skip = '1415 Second Ave';
+        this.props.setAddress(skip);
+
+        const urlSearch = window.location.search;
+
+        const urlParams = new URLSearchParams(urlSearch);
+
+        const zip = urlParams.get('zip_code');
+        const lp = urlParams.get('lp_request_id');
+        const ab = urlParams.get('ab');
+        const gender = urlParams.get('gender');
+        const month = urlParams.get('month');
+        const day = urlParams.get('day');
+        const year = urlParams.get('year');
+
+        this.props.history.push('/name' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + month + '&day=' + day + '&year=' + year + '&address=' + skip);
     }
-    else{
-
-      values.preventDefault();
-      toast.dismiss();
-      console.log("success: ", address);
-
-
-    this.props.setAddress(address);
-
-    this.props.history.push('/name' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + month + '&day=' + day + '&year=' + year + '&address=' + address);
-    }
-      
-  }
 
 
     render() {
@@ -119,6 +140,7 @@ const year = urlParams.get('year');
                                         <button className="px-6 py-4 mb-3 m-2 text-md font-bold bg-blue-400 hover:bg-blue-600 hover:shadow-lg text-white rounded transition duration-200 nextButton " type="submit">Next</button>
 
                                     </div>
+                                    <a onClick={this.skip}>Skip Question</a>
 
                                 </form>
 
