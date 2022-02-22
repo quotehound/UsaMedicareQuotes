@@ -21,14 +21,14 @@ class Age extends Component {
 
     const urlParams = new URLSearchParams(urlSearch);
 
-    const zip = urlParams.get('zip_code');
+    const zip = urlParams.get('zip');
 
     const lp = urlParams.get('lp')
 
     const city = document.getElementById('city').value;
     const state = document.getElementById('state').value;
 
-    this.props.history.push('/enrolled' + '?lp=' + lp + '&zip_code=' + zip + '&city=' + city + '&state=' + state);
+    this.props.history.push('/enrolled' + '?lp=' + lp + '&zip=' + zip + '&city=' + city + '&state=' + state);
 
 
   }
