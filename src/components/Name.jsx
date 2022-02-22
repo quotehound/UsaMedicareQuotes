@@ -58,7 +58,7 @@ class Name extends Component {
     
 (urlSearch);
 
-const zip = urlParams.get('zip_code');
+const zip = urlParams.get('zip');
 const lp = urlParams.get('lp');
 const ab = urlParams.get('ab');
 const gender = urlParams.get('gender');
@@ -68,7 +68,7 @@ const year = urlParams.get('year');
 const address = urlParams.get('address')
 
      
-    this.props.history.push('/email-phone' + '?lp=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + month + '&day=' + day + '&year=' + year + '&address=' + address + '&first_name=' + firstName + '&last_name=' + lastName);
+    this.props.history.push('/email-phone' + '?lp=' + lp + '&zip=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + month + '&day=' + day + '&year=' + year + '&address=' + address + '&first_name=' + firstName + '&last_name=' + lastName);
 
     }
 

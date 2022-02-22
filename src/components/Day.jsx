@@ -19,13 +19,13 @@ class Day extends Component {
 
         const urlParams = new URLSearchParams(urlSearch);
 
-        const zip = urlParams.get('zip_code');
+        const zip = urlParams.get('zip');
         const lp = urlParams.get('lp');
         const ab = urlParams.get('ab');
     const gender = urlParams.get('gender');
     const month = urlParams.get('month');
 
-        this.props.history.push('/year' + '?lp=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + month + '&day=' + d);
+        this.props.history.push('/year' + '?lp=' + lp + '&zip=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + month + '&day=' + d);
       
     }
 

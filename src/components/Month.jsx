@@ -17,7 +17,7 @@ class Month extends Component {
 
         const urlParams = new URLSearchParams(urlSearch);
 
-    const zip = urlParams.get('zip_code');
+    const zip = urlParams.get('zip');
     const lp = urlParams.get('lp');
     const ab = urlParams.get('ab');
     const gender = urlParams.get('gender')
@@ -25,7 +25,7 @@ class Month extends Component {
        
 
 
-        this.props.history.push('/day' + '?lp=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + m);
+        this.props.history.push('/day' + '?lp=' + lp + '&zip=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + m);
     }
 
     skip = (values) => {
@@ -39,7 +39,7 @@ class Month extends Component {
 
         const urlParams = new URLSearchParams(urlSearch);
 
-    const zip = urlParams.get('zip_code');
+    const zip = urlParams.get('zip');
     const lp = urlParams.get('lp');
     const ab = urlParams.get('ab');
     const gender = urlParams.get('gender')
@@ -47,7 +47,7 @@ class Month extends Component {
        
 
 
-        this.props.history.push('/day' + '?lp=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + skip);
+        this.props.history.push('/day' + '?lp=' + lp + '&zip=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + skip);
     }
 
 

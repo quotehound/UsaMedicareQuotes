@@ -29,7 +29,7 @@ class Address extends Component {
 
         const urlParams = new URLSearchParams(urlSearch);
 
-        const zip = urlParams.get('zip_code');
+        const zip = urlParams.get('zip');
         const lp = urlParams.get('lp');
         const ab = urlParams.get('ab');
         const gender = urlParams.get('gender');
@@ -51,7 +51,7 @@ class Address extends Component {
 
             this.props.setAddress(address);
 
-            this.props.history.push('/name' + '?lp=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + month + '&day=' + day + '&year=' + year + '&address=' + address);
+            this.props.history.push('/name' + '?lp=' + lp + '&zip=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + month + '&day=' + day + '&year=' + year + '&address=' + address);
         }
       
     }
