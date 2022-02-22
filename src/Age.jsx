@@ -28,7 +28,7 @@ class Age extends Component {
     const city = document.getElementById('city').value;
     const state = document.getElementById('state').value;
 
-    this.props.history.push('/enrolled' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&city=' + city + '&state=' + state);
+    this.props.history.push('/enrolled' + '?lp=' + lp + '&zip_code=' + zip + '&city=' + city + '&state=' + state);
 
 
   }

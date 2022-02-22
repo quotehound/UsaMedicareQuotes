@@ -141,6 +141,29 @@ LeadiDscript.parentNode.insertBefore(s, LeadiDscript);
 })();
 </script>
 <noscript><img src='//create.leadid.com/noscript.gif?lac=45a2434e-3343-bea3-12ad-6220f9a33148&lck=1f7e5eb9-813c-7868-efc5-d38eab09ace6&snippet_version=2' /></noscript>
+
+<script> 
+  const urlSearch = window.location.search;
+
+  const urlParams = new URLSearchParams(urlSearch);
+
+  const lp = urlParams.get('lp_request_id');
+  const gclid = urlParams.get('gclid');
+
+  document.getElementById('lp').value = lp;
+
+  localStorage.setItem('lp', lp)
+
+  let lval =  document.getElementById('lp').value;
+
+  if(lval = null){
+    document.getElementById('lp').value = '';
+  }
+  document.getElementById('gclid').value = gclid;
+
+  </script> 
+
+
 	<input id="leadid_token" name="universal_leadid" type="hidden" value=""/>
 
   <input type="hidden" id="lp" name="lp" /> 
@@ -157,24 +180,7 @@ LeadiDscript.parentNode.insertBefore(s, LeadiDscript);
 
 
 
-  <script> 
-    const urlSearch = window.location.search;
-
-    const urlParams = new URLSearchParams(urlSearch);
-
-    const lp = urlParams.get('lp_request_id');
-    const gclid = urlParams.get('gclid');
-
-    document.getElementById('lp').value = lp;
-
-    let lval =  document.getElementById('lp').value;
-
-    if(lval = null){
-      document.getElementById('lp').value = '';
-    }
-    document.getElementById('gclid').value = gclid;
-
-    </script> 
+  
 
 
 
