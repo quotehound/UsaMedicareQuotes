@@ -48,7 +48,7 @@ class EmailPhone extends Component {
 
 
 const zip = urlParams.get('zip_code');
-const lp = urlParams.get('lp_request_id');
+const lp = urlParams.get('lp');
 const ab = urlParams.get('ab');
 const gender = urlParams.get('gender');
 const month = urlParams.get('month');
@@ -66,7 +66,7 @@ const lastName = urlParams.get('last_name');
             loading: true 
           }, this.postMedicare(this.props.postData));
 
-          this.props.history.push('/thank-you' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + month + '&day=' + day + '&year=' + year + '&address=' + address + '&first_name=' + firstName + '&last_name=' + lastName + '&email=' + email + '&phone_home=' + phone)
+          this.props.history.push('/thank-you' + '?lp=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + month + '&day=' + day + '&year=' + year + '&address=' + address + '&first_name=' + firstName + '&last_name=' + lastName + '&email=' + email + '&phone_home=' + phone)
     };
 
     postURL = (values) => {
@@ -75,7 +75,7 @@ const lastName = urlParams.get('last_name');
         const urlParams = new URLSearchParams(urlSearch);
 
         const zip = urlParams.get('zip_code');
-const lp = urlParams.get('lp_request_id');
+const lp = urlParams.get('lp');
 const ab = urlParams.get('ab');
 const gender = urlParams.get('gender');
 const month = urlParams.get('month');

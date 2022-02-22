@@ -82,7 +82,7 @@ class Enrolled extends Component {
         const urlParams = new URLSearchParams(urlSearch);
     
         const zip = urlParams.get('zip');
-      var lp = urlParams.get('lp_request_id');
+      var lp = urlParams.get('lp');
 
 
       if (lp === null) {
@@ -91,14 +91,14 @@ class Enrolled extends Component {
         localStorage.setItem('lp', lp)
       }
       else {
-        var lp = urlParams.get('lp_request_id')
+        var lp = urlParams.get('lp')
         localStorage.setItem('lp', lp)
       }
 
       console.log(localStorage)
     
 
-        this.props.history.push('/gender' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&ab=' + v)
+        this.props.history.push('/gender' + '?lp=' + lp + '&zip_code=' + zip + '&ab=' + v)
 
         
     }

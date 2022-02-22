@@ -27,10 +27,10 @@ class Gender extends Component {
     const urlParams = new URLSearchParams(urlSearch);
 
     const zip = urlParams.get('zip_code');
-    const lp = urlParams.get('lp_request_id');
+    const lp = urlParams.get('lp');
     const ab = urlParams.get('ab');
 
-    this.props.history.push('/month' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + g)
+    this.props.history.push('/month' + '?lp=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + g)
     
 
 
@@ -51,10 +51,10 @@ class Gender extends Component {
     const urlParams = new URLSearchParams(urlSearch);
 
     const zip = urlParams.get('zip_code');
-    const lp = urlParams.get('lp_request_id');
+    const lp = urlParams.get('lp');
     const ab = urlParams.get('ab');
 
-    this.props.history.push('/month' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + skip)
+    this.props.history.push('/month' + '?lp=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + skip)
 
   }
 

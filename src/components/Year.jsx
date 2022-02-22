@@ -27,7 +27,7 @@ class Year extends Component {
         const urlParams = new URLSearchParams(urlSearch);
 
         const zip = urlParams.get('zip_code');
-        const lp = urlParams.get('lp_request_id');
+        const lp = urlParams.get('lp');
         const ab = urlParams.get('ab');
     const gender = urlParams.get('gender');
     const month = urlParams.get('month');
@@ -54,7 +54,7 @@ class Year extends Component {
             this.props.setDOB(month + '/' + day + '/' + year)
 
 
-            this.props.history.push('/address' + '?lp_request_id=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + month + '&day=' + day + '&year=' + year);
+            this.props.history.push('/address' + '?lp=' + lp + '&zip_code=' + zip + '&ab=' + ab + '&gender=' + gender + '&month=' + month + '&day=' + day + '&year=' + year);
         }
 
     }
